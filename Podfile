@@ -20,3 +20,16 @@ target 'ItunesExample' do
   end
 
 end
+
+target 'Networking' do
+  project 'Networking/Networking.xcodeproj'
+
+  pod 'Alamofire'
+
+  target 'NetworkingTests' do
+    inherit! :search_paths
+    pod "Quick"
+    pod "Nimble"
+  end
+
+end
