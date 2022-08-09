@@ -1,4 +1,4 @@
-platform :ios, '10.0'
+platform :ios, '15.0'
 use_frameworks!
 workspace 'ItunesExample.xcworkspace'
 
@@ -15,7 +15,7 @@ end
 target 'ItunesExample' do
   project 'ItunesExample.xcodeproj'
 
-  pod 'SDWebImage'
+  pod 'SDWebImageSwiftUI'
 
   target 'ItunesExampleTests' do
     inherit! :search_paths
@@ -32,6 +32,18 @@ target 'Networking' do
   project 'Networking/Networking.xcodeproj'
 
   target 'NetworkingTests' do
+    inherit! :search_paths
+    test_pods
+  end
+
+end
+
+target 'Search' do
+  project 'Search/Search.xcodeproj'
+
+  pod 'SDWebImageSwiftUI'
+
+  target 'SearchTests' do
     inherit! :search_paths
     test_pods
   end

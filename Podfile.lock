@@ -14,12 +14,14 @@ PODS:
   - SDWebImage (5.13.2):
     - SDWebImage/Core (= 5.13.2)
   - SDWebImage/Core (5.13.2)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
 
 DEPENDENCIES:
   - Nimble
   - Nimble-Snapshots
   - Quick
-  - SDWebImage
+  - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
@@ -28,6 +30,7 @@ SPEC REPOS:
     - Nimble-Snapshots
     - Quick
     - SDWebImage
+    - SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
   iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
@@ -35,7 +38,8 @@ SPEC CHECKSUMS:
   Nimble-Snapshots: ef281b908c604f78c8313587e25ea92c8ab513d7
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
   SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
 
-PODFILE CHECKSUM: 16f31854682a892a79faa1263da0610d5a814f1f
+PODFILE CHECKSUM: 6810763aae5691005ffb54adb3fee2588ab4de8a
 
 COCOAPODS: 1.11.3

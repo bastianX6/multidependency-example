@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Search
 
 @main
 struct ItunesExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchView()
         }
     }
 }
