@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		037D417528A1DAEE00116B87 /* NetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D417428A1DAEE00116B87 /* NetworkClientProtocol.swift */; };
+		037D417828A1DB8900116B87 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D417728A1DB8900116B87 /* HttpMethod.swift */; };
+		037D417A28A1DBDD00116B87 /* BaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D417928A1DBDD00116B87 /* BaseUrl.swift */; };
+		037D417C28A1DC6500116B87 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D417B28A1DC6500116B87 /* Endpoints.swift */; };
 		038808A228A0894E00A9304F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0388089928A0894D00A9304F /* Networking.framework */; };
 		038808A728A0894E00A9304F /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038808A628A0894E00A9304F /* NetworkingTests.swift */; };
 		038808A828A0894E00A9304F /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 0388089C28A0894D00A9304F /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03FB8D9128A1DDA8009E5AA9 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB8D9028A1DDA8009E5AA9 /* NetworkClient.swift */; };
+		03FB8D9328A1DE8B009E5AA9 /* NetworkClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB8D9228A1DE8B009E5AA9 /* NetworkClientError.swift */; };
 		BE4F1F21850E730E3850BFCA /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32318737A8FC711B7E91D015 /* Pods_Networking.framework */; };
 		BF96EF34A94F26DF23A74DD0 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F72833B93F8A263C06274A7 /* Pods_NetworkingTests.framework */; };
 /* End PBXBuildFile section */
@@ -26,10 +32,16 @@
 
 /* Begin PBXFileReference section */
 		0009B70435498F0762A065C6 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
+		037D417428A1DAEE00116B87 /* NetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocol.swift; sourceTree = "<group>"; };
+		037D417728A1DB8900116B87 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		037D417928A1DBDD00116B87 /* BaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrl.swift; sourceTree = "<group>"; };
+		037D417B28A1DC6500116B87 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		0388089928A0894D00A9304F /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0388089C28A0894D00A9304F /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		038808A128A0894E00A9304F /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038808A628A0894E00A9304F /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		03FB8D9028A1DDA8009E5AA9 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		03FB8D9228A1DE8B009E5AA9 /* NetworkClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientError.swift; sourceTree = "<group>"; };
 		32318737A8FC711B7E91D015 /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B824FEBF2CFB5129C376EF1 /* Pods-NetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		3F72833B93F8A263C06274A7 /* Pods_NetworkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +70,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		037D417628A1DB7A00116B87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				037D417728A1DB8900116B87 /* HttpMethod.swift */,
+				037D417928A1DBDD00116B87 /* BaseUrl.swift */,
+				037D417B28A1DC6500116B87 /* Endpoints.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0388088F28A0894D00A9304F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 		0388089B28A0894D00A9304F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				03FB8D8F28A1DD87009E5AA9 /* Client */,
+				037D417628A1DB7A00116B87 /* Models */,
 				0388089C28A0894D00A9304F /* Networking.h */,
 			);
 			path = Networking;
@@ -92,6 +116,16 @@
 				038808A628A0894E00A9304F /* NetworkingTests.swift */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		03FB8D8F28A1DD87009E5AA9 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				037D417428A1DAEE00116B87 /* NetworkClientProtocol.swift */,
+				03FB8D9028A1DDA8009E5AA9 /* NetworkClient.swift */,
+				03FB8D9228A1DE8B009E5AA9 /* NetworkClientError.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 		1A67BB55B1223D52C6AF9197 /* Frameworks */ = {
@@ -180,6 +214,7 @@
 				TargetAttributes = {
 					0388089828A0894D00A9304F = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					038808A028A0894E00A9304F = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -291,6 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037D417828A1DB8900116B87 /* HttpMethod.swift in Sources */,
+				03FB8D9128A1DDA8009E5AA9 /* NetworkClient.swift in Sources */,
+				037D417A28A1DBDD00116B87 /* BaseUrl.swift in Sources */,
+				037D417C28A1DC6500116B87 /* Endpoints.swift in Sources */,
+				03FB8D9328A1DE8B009E5AA9 /* NetworkClientError.swift in Sources */,
+				037D417528A1DAEE00116B87 /* NetworkClientProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FA020065209A109E27309E7 /* Pods-Networking.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -457,6 +499,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -466,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0009B70435498F0762A065C6 /* Pods-Networking.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -495,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2C7C439A42D8E414FB9632F /* Pods-NetworkingTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 48L72N5ZP6;
@@ -512,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B824FEBF2CFB5129C376EF1 /* Pods-NetworkingTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 48L72N5ZP6;
