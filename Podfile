@@ -2,17 +2,24 @@ platform :ios, '10.0'
 use_frameworks!
 workspace 'ItunesExample.xcworkspace'
 
+def test_pods
+  pod "Quick"
+  pod "Nimble"
+end
+
+def snapshot_test_pods
+  test_pods
+  pod "Nimble-Snapshots"
+end
+
 target 'ItunesExample' do
   project 'ItunesExample.xcodeproj'
 
-  pod 'Alamofire'
   pod 'SDWebImage'
 
   target 'ItunesExampleTests' do
     inherit! :search_paths
-    pod "Quick"
-    pod "Nimble"
-    pod "Nimble-Snapshots"
+    snapshot_test_pods
   end
 
   target 'ItunesExampleUITests' do
@@ -28,8 +35,7 @@ target 'Networking' do
 
   target 'NetworkingTests' do
     inherit! :search_paths
-    pod "Quick"
-    pod "Nimble"
+    test_pods
   end
 
 end
