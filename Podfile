@@ -31,8 +31,6 @@ end
 target 'Networking' do
   project 'Networking/Networking.xcodeproj'
 
-  pod 'Alamofire'
-
   target 'NetworkingTests' do
     inherit! :search_paths
     test_pods

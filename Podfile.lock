@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (5.6.2)
   - iOSSnapshotTestCase (8.0.0):
     - iOSSnapshotTestCase/SwiftSupport (= 8.0.0)
   - iOSSnapshotTestCase/Core (8.0.0)
@@ -17,7 +16,6 @@ PODS:
   - SDWebImage/Core (5.13.2)
 
 DEPENDENCIES:
-  - Alamofire
   - Nimble
   - Nimble-Snapshots
   - Quick
@@ -25,7 +23,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - iOSSnapshotTestCase
     - Nimble
     - Nimble-Snapshots
@@ -33,13 +30,12 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Nimble-Snapshots: ef281b908c604f78c8313587e25ea92c8ab513d7
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
   SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
 
-PODFILE CHECKSUM: 203a584472e98ed1cef9a6de8e7b823f68a51ff9
+PODFILE CHECKSUM: 16f31854682a892a79faa1263da0610d5a814f1f
 
 COCOAPODS: 1.11.3

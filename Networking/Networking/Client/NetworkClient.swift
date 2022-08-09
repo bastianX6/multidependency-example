@@ -8,10 +8,9 @@
 import Foundation
 
 public class NetworkClient: NetworkClientProtocol {
-    private let urlSession: URLSession
-    private var dataTask: URLSessionDataTask?
+    private let urlSession: URLSessionProtocol
 
-    public init(urlSession: URLSession = URLSession.shared) {
+    public init(urlSession: URLSessionProtocol = URLSession.shared) {
         self.urlSession = urlSession
     }
 
@@ -27,7 +26,7 @@ public class NetworkClient: NetworkClientProtocol {
         request.httpBody = httpBody
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let (data, response) = try await self.urlSession.data(for: request)
+        let (data, response) = try await self.urlSession.data(for: request, delegate: nil)
 
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkClientError.noHttpResponse
