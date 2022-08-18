@@ -18,18 +18,24 @@ struct SearchCellModel: Identifiable {
         return URL(string: self.coverUrlString)
     }
 
+    let type: SearchType
+
     init(songName: String,
          artistName: String,
          coverUrlString: String,
-         trackId: Int64)
+         trackId: Int64,
+         type: SearchType)
     {
         self.songName = songName
         self.artistName = artistName
         self.coverUrlString = coverUrlString
         self.trackId = trackId
+        self.type = type
     }
 
-    init?(element: ItunesElement) {
+    init?(element: ItunesElement,
+          type: SearchType)
+    {
         guard let songName = element.trackName,
               let artistName = element.artistName,
               let coverUrl = element.artworkUrl60,
@@ -41,5 +47,6 @@ struct SearchCellModel: Identifiable {
         self.artistName = artistName
         self.coverUrlString = coverUrl
         self.trackId = trackId
+        self.type = type
     }
 }

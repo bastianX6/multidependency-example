@@ -24,6 +24,7 @@
 		8A2ACF2228A2CAD30066D2CE /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2ACF2128A2CAD30066D2CE /* SearchViewCell.swift */; };
 		8A2ACF2428A2CC370066D2CE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2ACF2328A2CC370066D2CE /* SearchView.swift */; };
 		8AFA617A28AE69310076839D /* AudioDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA617928AE69310076839D /* AudioDetail.framework */; };
+		8AFA617E28AE6F0E0076839D /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA617D28AE6F0E0076839D /* SearchType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		8A2ACF2128A2CAD30066D2CE /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		8A2ACF2328A2CC370066D2CE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		8AFA617928AE69310076839D /* AudioDetail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AudioDetail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AFA617D28AE6F0E0076839D /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
 		A6201D141E3A8DE2FCE70F58 /* Pods-SearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTests.debug.xcconfig"; path = "Target Support Files/Pods-SearchTests/Pods-SearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEBCA17650C6D9D8188934DE /* Pods-Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search.release.xcconfig"; path = "Target Support Files/Pods-Search/Pods-Search.release.xcconfig"; sourceTree = "<group>"; };
 		B5B09C9A73E75F79F64A1AB0 /* Pods-SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTests.release.xcconfig"; path = "Target Support Files/Pods-SearchTests/Pods-SearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				8A2ACF0C28A2BCE90066D2CE /* ItunesElement.swift */,
 				8A2ACF0E28A2BD410066D2CE /* ItunesSearchResponse.swift */,
+				8AFA617D28AE6F0E0076839D /* SearchType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A2ACF2428A2CC370066D2CE /* SearchView.swift in Sources */,
+				8AFA617E28AE6F0E0076839D /* SearchType.swift in Sources */,
 				8A2ACEF028A2AED40066D2CE /* Search.docc in Sources */,
 				8A2ACF1928A2C68E0066D2CE /* ItunesSearchProvider.swift in Sources */,
 				8A2ACF0D28A2BCE90066D2CE /* ItunesElement.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 import Networking
 
 protocol ItunesSearchServiceProtocol {
-    func getSearchResults(for text: String) async throws -> ItunesSearchResponse
+    func getSearchResults(for text: String, type: SearchType) async throws -> ItunesSearchResponse
 }
 
 class ItunesSearchService: ItunesSearchServiceProtocol {
@@ -19,11 +19,14 @@ class ItunesSearchService: ItunesSearchServiceProtocol {
         self.client = client
     }
 
-    func getSearchResults(for text: String) async throws -> ItunesSearchResponse {
-        let urlString = Endpoints.search.path
+    func getSearchResults(for text: String, type: SearchType) async throws -> ItunesSearchResponse {
+        guard let query = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            throw NetworkClientError.noUrl
+        }
 
-        guard let query = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-              let url = URL(string: urlString + "?term=" + query)
+        let baseUrlString = Endpoints.search.path
+        let urlString = String(format: "%@?term=%@&media=%@", baseUrlString, query, type.urlValue)
+        guard let url = URL(string: urlString)
         else {
             throw NetworkClientError.noUrl
         }

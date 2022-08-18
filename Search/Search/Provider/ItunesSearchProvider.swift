@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ItunesSearchProviderProtocol {
-    func search(text: String) async throws -> [SearchCellModel]
+    func search(text: String, type: SearchType) async throws -> [SearchCellModel]
 }
 
 class ItunesSearchProvider: ItunesSearchProviderProtocol {
@@ -18,9 +18,9 @@ class ItunesSearchProvider: ItunesSearchProviderProtocol {
         self.service = service
     }
 
-    func search(text: String) async throws -> [SearchCellModel] {
-        let response = try await self.service.getSearchResults(for: text)
+    func search(text: String, type: SearchType) async throws -> [SearchCellModel] {
+        let response = try await self.service.getSearchResults(for: text, type: type)
         let results = response.results ?? []
-        return results.compactMap { SearchCellModel(element: $0) }
+        return results.compactMap { SearchCellModel(element: $0, type: type) }
     }
 }

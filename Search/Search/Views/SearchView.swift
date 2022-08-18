@@ -24,6 +24,13 @@ public struct SearchView: View {
         NavigationView {
             VStack {
                 SearchBar(text: self.$viewModel.text, placeholder: "seach an artist")
+                Picker("Search type", selection: self.$viewModel.searchType) {
+                    Text("Audio").tag(SearchType.music.rawValue)
+                    Text("Music Video").tag(SearchType.musicVideo.rawValue)
+                    Text("TV Show").tag(SearchType.tvShow.rawValue)
+                }
+                .pickerStyle(.segmented)
+                .padding([.leading, .trailing])
                 self.viewForState
             }
             .navigationBarTitle("Itunes Search")
@@ -43,10 +50,19 @@ public struct SearchView: View {
                 Text("No results")
                     .frame(minHeight: 0, maxHeight: .infinity)
             } else {
-                List {
-                    ForEach(elements, id: \.id) { item in
-                        NavigationLink(destination: AudioDetailView(trackId: item.trackId)) {
-                            SearchViewCell(model: item)
+                VStack {
+                    List {
+                        ForEach(elements, id: \.id) { item in
+                            switch item.type {
+                            case .music:
+                                NavigationLink(destination: AudioDetailView(trackId: item.trackId)) {
+                                    SearchViewCell(model: item)
+                                }
+                            default:
+                                NavigationLink(destination: Text("Coming soon..")) {
+                                    SearchViewCell(model: item)
+                                }
+                            }
                         }
                     }
                 }

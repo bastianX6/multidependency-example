@@ -9,8 +9,9 @@ import Foundation
 
 class SearchViewModel: ObservableObject {
     private let provider: ItunesSearchProviderProtocol
-    private var currentTask: Task<(), Never>?
+    private var currentTask: Task<Void, Never>?
     @Published var state: SearchViewState<[SearchCellModel]> = .initial
+    @Published var searchType: Int = SearchType.music.rawValue
 
     init(provider: ItunesSearchProviderProtocol = ItunesSearchProvider()) {
         self.provider = provider
@@ -25,10 +26,11 @@ class SearchViewModel: ObservableObject {
     func search() {
         self.updateState(.loading)
         self.currentTask?.cancel()
+        let type = SearchType(rawValue: self.searchType) ?? .music
 
         let task = Task.init { [unowned self] in
             do {
-                let elements = try await self.provider.search(text: self.text)
+                let elements = try await self.provider.search(text: self.text, type: type)
                 self.updateState(.withData(elements))
             } catch {
                 self.updateState(.error(error))
