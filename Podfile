@@ -45,7 +45,19 @@ target 'Search' do
 
   target 'SearchTests' do
     inherit! :search_paths
-    test_pods
+    snapshot_test_pods
+  end
+
+end
+
+target 'AudioDetail' do
+  project 'AudioDetail/AudioDetail.xcodeproj'
+
+  pod 'SDWebImageSwiftUI'
+
+  target 'AudioDetailTests' do
+    inherit! :search_paths
+    snapshot_test_pods
   end
 
 end

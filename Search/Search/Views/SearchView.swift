@@ -5,13 +5,20 @@
 //  Created by bastian.veliz.vega on 09-08-22.
 //
 
+import AudioDetail
 import Foundation
 import SwiftUI
 
 public struct SearchView: View {
     @ObservedObject private var viewModel = SearchViewModel()
 
-    public init() {}
+    init(viewModel: SearchViewModel) {
+        self.viewModel = viewModel
+    }
+
+    public init() {
+        self.init(viewModel: SearchViewModel())
+    }
 
     public var body: some View {
         NavigationView {
@@ -38,7 +45,9 @@ public struct SearchView: View {
             } else {
                 List {
                     ForEach(elements, id: \.id) { item in
-                        SearchViewCell(model: item)
+                        NavigationLink(destination: AudioDetailView(trackId: item.trackId)) {
+                            SearchViewCell(model: item)
+                        }
                     }
                 }
             }

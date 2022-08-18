@@ -5,6 +5,9 @@
       location = "group:ItunesExample.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:AudioDetail/AudioDetail.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Networking/Networking.xcodeproj">
    </FileRef>
    <FileRef
