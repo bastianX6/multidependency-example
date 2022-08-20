@@ -23,7 +23,7 @@ public struct SearchView: View {
     public var body: some View {
         NavigationView {
             VStack {
-                SearchBar(text: self.$viewModel.text, placeholder: "seach an artist")
+                SearchBar(text: self.$viewModel.text, placeholder: "search an artist")
                 Picker("Search type", selection: self.$viewModel.searchType) {
                     Text("Audio").tag(SearchType.music.rawValue)
                     Text("Music Video").tag(SearchType.musicVideo.rawValue)

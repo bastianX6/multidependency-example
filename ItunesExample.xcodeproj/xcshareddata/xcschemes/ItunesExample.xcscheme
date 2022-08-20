@@ -58,6 +58,36 @@
                ReferencedContainer = "container:Networking/Networking.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8AFA614D28AE5F8B0076839D"
+               BuildableName = "AudioDetailTests.xctest"
+               BlueprintName = "AudioDetailTests"
+               ReferencedContainer = "container:AudioDetail/AudioDetail.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8A2ACEF428A2AED60066D2CE"
+               BuildableName = "SearchTests.xctest"
+               BlueprintName = "SearchTests"
+               ReferencedContainer = "container:Search/Search.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "VideoDetailTests"
+               BuildableName = "VideoDetailTests"
+               BlueprintName = "VideoDetailTests"
+               ReferencedContainer = "container:VideoDetail">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
