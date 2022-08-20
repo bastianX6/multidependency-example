@@ -1,0 +1,507 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name SDWebImageSwiftUI
+import Foundation
+@_exported import SDWebImage
+@_exported import SDWebImageSwiftUI
+import Swift
+import SwiftUI
+import _Concurrency
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public struct ActivityIndicator : PlatformViewRepresentable {
+  public init(_ isAnimating: Binding<Bool>, style: Style = .medium)
+  public typealias UIViewType = UIActivityIndicatorView
+  @_Concurrency.MainActor(unsafe) public func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView
+  @_Concurrency.MainActor(unsafe) public func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension ActivityIndicator {
+  public enum Style {
+    case medium
+    case large
+    public static func == (a: SDWebImageSwiftUI.ActivityIndicator.Style, b: SDWebImageSwiftUI.ActivityIndicator.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+final public class AnimatedImageCoordinator : NSObject {
+  final public var object: Any?
+  final public var userInfo: [AnyHashable : Any]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+@_Concurrency.MainActor(unsafe) public struct AnimatedImage : PlatformViewRepresentable {
+  @SwiftUI.Binding @_projectedValueProperty($isAnimating) @_Concurrency.MainActor(unsafe) public var isAnimating: Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    nonmutating set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    nonmutating _modify
+  }
+  @_Concurrency.MainActor(unsafe) public var $isAnimating: SwiftUI.Binding<Swift.Bool> {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public init(url: URL?, options: SDWebImageOptions = [], context: [SDWebImageContextOption : Any]? = nil)
+  @_Concurrency.MainActor(unsafe) public init(url: URL?, options: SDWebImageOptions = [], context: [SDWebImageContextOption : Any]? = nil, isAnimating: Binding<Bool>)
+  @_Concurrency.MainActor(unsafe) public init(name: String, bundle: Bundle? = nil)
+  @_Concurrency.MainActor(unsafe) public init(name: String, bundle: Bundle? = nil, isAnimating: Binding<Bool>)
+  @_Concurrency.MainActor(unsafe) public init(data: Data, scale: CGFloat = 1)
+  @_Concurrency.MainActor(unsafe) public init(data: Data, scale: CGFloat = 1, isAnimating: Binding<Bool>)
+  public typealias UIViewType = AnimatedImageViewWrapper
+  public typealias Coordinator = AnimatedImageCoordinator
+  @_Concurrency.MainActor(unsafe) public func makeCoordinator() -> Coordinator
+  @_Concurrency.MainActor(unsafe) public func makeUIView(context: UIViewRepresentableContext<AnimatedImage>) -> AnimatedImageViewWrapper
+  @_Concurrency.MainActor(unsafe) public func updateUIView(_ uiView: AnimatedImageViewWrapper, context: UIViewRepresentableContext<AnimatedImage>)
+  @_Concurrency.MainActor(unsafe) public static func dismantleUIView(_ uiView: AnimatedImageViewWrapper, coordinator: Coordinator)
+  public typealias Body = Swift.Never
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension AnimatedImage {
+  @_Concurrency.MainActor(unsafe) public func resizable(capInsets: EdgeInsets = EdgeInsets(), resizingMode: Image.ResizingMode = .stretch) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func renderingMode(_ renderingMode: Image.TemplateRenderingMode?) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func interpolation(_ interpolation: Image.Interpolation) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func antialiased(_ isAntialiased: Bool) -> AnimatedImage
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension AnimatedImage {
+  @_Concurrency.MainActor(unsafe) public func aspectRatio(_ aspectRatio: CGFloat? = nil, contentMode: ContentMode) -> some View
+  
+  @_Concurrency.MainActor(unsafe) public func aspectRatio(_ aspectRatio: CGSize, contentMode: ContentMode) -> some View
+  
+  @_Concurrency.MainActor(unsafe) public func scaledToFit() -> some View
+  
+  @_Concurrency.MainActor(unsafe) public func scaledToFill() -> some View
+  
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension AnimatedImage {
+  @_Concurrency.MainActor(unsafe) public func customLoopCount(_ loopCount: UInt?) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func maxBufferSize(_ bufferSize: UInt?) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func incrementalLoad(_ incrementalLoad: Bool) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func runLoopMode(_ runLoopMode: RunLoop.Mode) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func pausable(_ pausable: Bool) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func purgeable(_ purgeable: Bool) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func playbackRate(_ playbackRate: Double) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func playbackMode(_ playbackMode: SDAnimatedImagePlaybackMode) -> AnimatedImage
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension AnimatedImage {
+  @_Concurrency.MainActor(unsafe) public func onFailure(perform action: ((Error) -> Void)? = nil) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func onSuccess(perform action: ((PlatformImage, Data?, SDImageCacheType) -> Void)? = nil) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func onProgress(perform action: ((Int, Int) -> Void)? = nil) -> AnimatedImage
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension AnimatedImage {
+  @_Concurrency.MainActor(unsafe) public func onViewCreate(perform action: ((PlatformView, Context) -> Void)? = nil) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func onViewUpdate(perform action: ((PlatformView, Context) -> Void)? = nil) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public static func onViewDestroy(perform action: ((PlatformView, Coordinator) -> Void)? = nil)
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension AnimatedImage {
+  @_Concurrency.MainActor(unsafe) public func placeholder<T>(@SwiftUI.ViewBuilder content: () -> T) -> AnimatedImage where T : SwiftUI.View
+  @_Concurrency.MainActor(unsafe) public func placeholder(_ image: PlatformImage?) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func indicator(_ indicator: SDWebImageIndicator?) -> AnimatedImage
+  @_Concurrency.MainActor(unsafe) public func transition(_ transition: SDWebImageTransition?) -> AnimatedImage
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension AnimatedImage {
+  @_Concurrency.MainActor(unsafe) public func indicator<T>(_ indicator: Indicator<T>) -> some View where T : SwiftUI.View
+  
+  @_Concurrency.MainActor(unsafe) public func indicator<T>(@SwiftUI.ViewBuilder content: @escaping (_ isAnimating: Binding<Bool>, _ progress: Binding<Double>) -> T) -> some View where T : SwiftUI.View
+  
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Image {
+  @inlinable internal init(platformImage: PlatformImage) {
+        self.init(uiImage: platformImage)
+    }
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension PlatformImage.Orientation {
+  @inlinable internal var toSwiftUI: Image.Orientation {
+    get {
+        switch self {
+        case .up:
+            return .up
+        case .upMirrored:
+            return .upMirrored
+        case .down:
+            return .down
+        case .downMirrored:
+            return .downMirrored
+        case .left:
+            return .left
+        case .leftMirrored:
+            return .leftMirrored
+        case .right:
+            return .right
+        case .rightMirrored:
+            return .rightMirrored
+        @unknown default:
+            return .up
+        }
+    }
+  }
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Image.Orientation {
+  @inlinable internal var toPlatform: PlatformImage.Orientation {
+    get {
+        switch self {
+        case .up:
+            return .up
+        case .upMirrored:
+            return .upMirrored
+        case .down:
+            return .down
+        case .downMirrored:
+            return .downMirrored
+        case .left:
+            return .left
+        case .leftMirrored:
+            return .leftMirrored
+        case .right:
+            return .right
+        case .rightMirrored:
+            return .rightMirrored
+        }
+    }
+  }
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+final public class ImageManager : ObservableObject {
+  @Combine.Published @_projectedValueProperty($image) final public var image: PlatformImage? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $image: Combine.Published<SDWebImageSwiftUI.PlatformImage?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($imageData) final public var imageData: Data? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $imageData: Combine.Published<Foundation.Data?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($cacheType) final public var cacheType: SDImageCacheType {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $cacheType: Combine.Published<SDWebImage.SDImageCacheType>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($error) final public var error: Error? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $error: Combine.Published<Swift.Error?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isLoading) final public var isLoading: Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isLoading: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($progress) final public var progress: Double {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $progress: Combine.Published<Swift.Double>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isIncremental) final public var isIncremental: Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isIncremental: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public init(url: URL?, options: SDWebImageOptions = [], context: [SDWebImageContextOption : Any]? = nil)
+  final public func load()
+  final public func cancel()
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension ImageManager {
+  final public func setOnFailure(perform action: ((Error) -> Void)? = nil)
+  final public func setOnSuccess(perform action: ((PlatformImage, Data?, SDImageCacheType) -> Void)? = nil)
+  final public func setOnProgress(perform action: ((Int, Int) -> Void)? = nil)
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension ImageManager : IndicatorReportable {
+}
+@_hasMissingDesignatedInitializers @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+final public class ImagePlayer : ObservableObject {
+  final public var maxBufferSize: UInt?
+  final public var customLoopCount: UInt?
+  final public var runLoopMode: RunLoop.Mode
+  final public var playbackRate: Double
+  final public var playbackMode: SDAnimatedImagePlaybackMode
+  @objc deinit
+  @Combine.Published @_projectedValueProperty($currentFrame) final public var currentFrame: PlatformImage? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $currentFrame: Combine.Published<SDWebImageSwiftUI.PlatformImage?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($currentFrameIndex) final public var currentFrameIndex: UInt {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $currentFrameIndex: Combine.Published<Swift.UInt>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($currentLoopCount) final public var currentLoopCount: UInt {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $currentLoopCount: Combine.Published<Swift.UInt>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  final public var isValid: Bool {
+    get
+  }
+  final public var isPlaying: Bool {
+    get
+  }
+  final public func startPlaying()
+  final public func pausePlaying()
+  final public func stopPlaying()
+  final public func seekToFrame(at: UInt, loopCount: UInt)
+  final public func clearFrameBuffer()
+  final public func setupPlayer(animatedImage: SDAnimatedImageProvider)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+@_Concurrency.MainActor(unsafe) public class AnimatedImageViewWrapper : PlatformView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame frameRect: CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+@_Concurrency.MainActor(unsafe) public class ProgressIndicatorWrapper : PlatformView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame frameRect: CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: NSCoder)
+  @objc deinit
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public struct Indicator<T> where T : SwiftUI.View {
+  public init(@SwiftUI.ViewBuilder content: @escaping (_ isAnimating: Binding<Bool>, _ progress: Binding<Double>) -> T)
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public protocol IndicatorReportable : Combine.ObservableObject {
+  var isLoading: Bool { get set }
+  var progress: Double { get set }
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+@_Concurrency.MainActor(unsafe) public struct IndicatorViewModifier<T, V> : ViewModifier where T : SwiftUI.View, V : SDWebImageSwiftUI.IndicatorReportable {
+  @SwiftUI.ObservedObject @_projectedValueProperty($reporter) @_Concurrency.MainActor(unsafe) public var reporter: V {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  @_Concurrency.MainActor(unsafe) public var $reporter: SwiftUI.ObservedObject<V>.Wrapper {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var indicator: Indicator<T>
+  @_Concurrency.MainActor(unsafe) public func body(content: Content) -> some View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s17SDWebImageSwiftUI21IndicatorViewModifierV4body7contentQr0cD001_fG8_ContentVyACyxq_GG_tF", 0) __<T, V>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Indicator where T == SDWebImageSwiftUI.ActivityIndicator {
+  public static var activity: Indicator {
+    get
+  }
+  public static func activity(style: ActivityIndicator.Style) -> Indicator
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Indicator where T == SDWebImageSwiftUI.ProgressIndicator {
+  public static var progress: Indicator {
+    get
+  }
+  public static func progress(style: ProgressIndicator.Style) -> Indicator
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public struct ProgressIndicator : PlatformViewRepresentable {
+  public init(_ isAnimating: Binding<Bool>, progress: Binding<Double>, style: Style = .default)
+  public typealias UIViewType = ProgressIndicatorWrapper
+  @_Concurrency.MainActor(unsafe) public func makeUIView(context: UIViewRepresentableContext<ProgressIndicator>) -> ProgressIndicatorWrapper
+  @_Concurrency.MainActor(unsafe) public func updateUIView(_ uiView: ProgressIndicatorWrapper, context: UIViewRepresentableContext<ProgressIndicator>)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension ProgressIndicator {
+  public enum Style {
+    case `default`
+    case bar
+    public static func == (a: SDWebImageSwiftUI.ProgressIndicator.Style, b: SDWebImageSwiftUI.ProgressIndicator.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public typealias PlatformImage = UIImage
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public typealias PlatformView = UIView
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+public typealias PlatformViewRepresentable = UIViewRepresentable
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension AnyTransition {
+  public static var fade: AnyTransition {
+    get
+  }
+  public static func fade(duration: Double) -> AnyTransition
+  public static var flipFromLeft: AnyTransition {
+    get
+  }
+  public static func flipFromLeft(duration: Double) -> AnyTransition
+  public static var flipFromRight: AnyTransition {
+    get
+  }
+  public static func flipFromRight(duration: Double) -> AnyTransition
+  public static var flipFromTop: AnyTransition {
+    get
+  }
+  public static func flipFromTop(duration: Double) -> AnyTransition
+  public static var flipFromBottom: AnyTransition {
+    get
+  }
+  public static func flipFromBottom(duration: Double) -> AnyTransition
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+@_Concurrency.MainActor(unsafe) public struct WebImage : View {
+  @SwiftUI.Binding @_projectedValueProperty($isAnimating) @_Concurrency.MainActor(unsafe) public var isAnimating: Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    nonmutating set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    nonmutating _modify
+  }
+  @_Concurrency.MainActor(unsafe) public var $isAnimating: SwiftUI.Binding<Swift.Bool> {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public init(url: URL?, options: SDWebImageOptions = [], context: [SDWebImageContextOption : Any]? = nil)
+  @_Concurrency.MainActor(unsafe) public init(url: URL?, options: SDWebImageOptions = [], context: [SDWebImageContextOption : Any]? = nil, isAnimating: Binding<Bool>)
+  @_Concurrency.MainActor(unsafe) public var body: some View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s17SDWebImageSwiftUI03WebB0V4bodyQrvp", 0) __
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension WebImage {
+  @_Concurrency.MainActor(unsafe) public func resizable(capInsets: EdgeInsets = EdgeInsets(), resizingMode: Image.ResizingMode = .stretch) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func renderingMode(_ renderingMode: Image.TemplateRenderingMode?) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func interpolation(_ interpolation: Image.Interpolation) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func antialiased(_ isAntialiased: Bool) -> WebImage
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension WebImage {
+  @_Concurrency.MainActor(unsafe) public func onFailure(perform action: ((Error) -> Void)? = nil) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func onSuccess(perform action: ((PlatformImage, Data?, SDImageCacheType) -> Void)? = nil) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func onProgress(perform action: ((Int, Int) -> Void)? = nil) -> WebImage
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension WebImage {
+  @_Concurrency.MainActor(unsafe) public func placeholder<T>(@SwiftUI.ViewBuilder content: () -> T) -> WebImage where T : SwiftUI.View
+  @_Concurrency.MainActor(unsafe) public func placeholder(_ image: Image) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func retryOnAppear(_ flag: Bool) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func cancelOnDisappear(_ flag: Bool) -> WebImage
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension WebImage {
+  @_Concurrency.MainActor(unsafe) public func indicator<T>(_ indicator: Indicator<T>) -> some View where T : SwiftUI.View
+  
+  @_Concurrency.MainActor(unsafe) public func indicator<T>(@SwiftUI.ViewBuilder content: @escaping (_ isAnimating: Binding<Bool>, _ progress: Binding<Double>) -> T) -> some View where T : SwiftUI.View
+  
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension WebImage {
+  @_Concurrency.MainActor(unsafe) public func customLoopCount(_ loopCount: UInt?) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func maxBufferSize(_ bufferSize: UInt?) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func runLoopMode(_ runLoopMode: RunLoop.Mode) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func pausable(_ pausable: Bool) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func purgeable(_ purgeable: Bool) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func playbackRate(_ playbackRate: Double) -> WebImage
+  @_Concurrency.MainActor(unsafe) public func playbackMode(_ playbackMode: SDAnimatedImagePlaybackMode) -> WebImage
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension SDWebImageSwiftUI.ActivityIndicator.Style : Swift.Equatable {}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension SDWebImageSwiftUI.ActivityIndicator.Style : Swift.Hashable {}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension SDWebImageSwiftUI.ProgressIndicator.Style : Swift.Equatable {}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension SDWebImageSwiftUI.ProgressIndicator.Style : Swift.Hashable {}

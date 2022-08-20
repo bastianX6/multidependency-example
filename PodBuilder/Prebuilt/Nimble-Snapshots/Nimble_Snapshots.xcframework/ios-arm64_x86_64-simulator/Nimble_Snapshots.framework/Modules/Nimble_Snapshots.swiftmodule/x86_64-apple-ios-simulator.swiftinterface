@@ -1,0 +1,82 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name Nimble_Snapshots
+import FBSnapshotTestCase
+import Foundation
+import Nimble
+@_exported import Nimble_Snapshots
+import QuartzCore
+import Swift
+import UIKit
+import XCTest
+import _Concurrency
+@_inheritsConvenienceInitializers @objc final public class CurrentTestCaseTracker : NSObject, XCTestObservation {
+  @objc(sharedInstance) public static let shared: Nimble_Snapshots.CurrentTestCaseTracker
+  @objc final public func testCaseWillStart(_ testCase: XCTestCase)
+  @objc final public func testCaseDidFinish(_ testCase: XCTestCase)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ResizeMode {
+  case frame
+  case constrains
+  case block(resizeBlock: (UIView, CGSize) -> Void)
+  case custom(viewResizer: ViewResizer)
+}
+public protocol ViewResizer {
+  func resize(view: UIView, for size: CGSize)
+}
+public struct DynamicSizeSnapshot {
+}
+public func snapshot(_ name: String? = nil, identifier: String? = nil, sizes: [String : CGSize], resizeMode: ResizeMode = .frame) -> DynamicSizeSnapshot
+public func haveValidDynamicSizeSnapshot(named name: String? = nil, identifier: String? = nil, sizes: [String : CGSize], isDeviceAgnostic: Bool = false, usesDrawRect: Bool = false, pixelTolerance: CGFloat? = nil, tolerance: CGFloat? = nil, resizeMode: ResizeMode = .frame, shouldIgnoreScale: Bool = false) -> Predicate<Snapshotable>
+public func recordSnapshot(_ name: String? = nil, identifier: String? = nil, sizes: [String : CGSize], resizeMode: ResizeMode = .frame) -> DynamicSizeSnapshot
+public func recordDynamicSizeSnapshot(named name: String? = nil, identifier: String? = nil, sizes: [String : CGSize], isDeviceAgnostic: Bool = false, usesDrawRect: Bool = false, resizeMode: ResizeMode = .frame, shouldIgnoreScale: Bool = false) -> Predicate<Snapshotable>
+public func == (lhs: Expectation<Snapshotable>, rhs: DynamicSizeSnapshot)
+public func allContentSizeCategories() -> [UIContentSizeCategory]
+public func haveValidDynamicTypeSnapshot(named name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false, pixelTolerance: CGFloat? = nil, tolerance: CGFloat? = nil, sizes: [UIContentSizeCategory] = allContentSizeCategories(), isDeviceAgnostic: Bool = false) -> Predicate<Snapshotable>
+public func recordDynamicTypeSnapshot(named name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false, sizes: [UIContentSizeCategory] = allContentSizeCategories(), isDeviceAgnostic: Bool = false) -> Predicate<Snapshotable>
+@objc public protocol Snapshotable {
+  @objc var snapshotObject: UIView? { get }
+}
+extension UIViewController : Snapshotable {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var snapshotObject: UIView? {
+    @objc get
+  }
+}
+extension UIView : Snapshotable {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var snapshotObject: UIView? {
+    @objc get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class FBSnapshotTest : NSObject {
+  public class func setReferenceImagesDirectory(_ directory: String?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public func setNimbleTestFolder(_ testFolder: String)
+public func setNimbleTolerance(_ tolerance: CGFloat)
+public func setNimblePixelTolerance(_ pixelTolerance: CGFloat)
+public func recordAllSnapshots()
+public func haveValidSnapshot(named name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false, pixelTolerance: CGFloat? = nil, tolerance: CGFloat? = nil, shouldIgnoreScale: Bool = false) -> Predicate<Snapshotable>
+public func haveValidDeviceAgnosticSnapshot(named name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false, pixelTolerance: CGFloat? = nil, tolerance: CGFloat? = nil, shouldIgnoreScale: Bool = false) -> Predicate<Snapshotable>
+public func recordSnapshot(named name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false, shouldIgnoreScale: Bool = false) -> Predicate<Snapshotable>
+public func recordDeviceAgnosticSnapshot(named name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false, shouldIgnoreScale: Bool = false) -> Predicate<Snapshotable>
+public class NBSMockedApplication {
+  public init()
+  @objc deinit
+  public func mockPreferredContentSizeCategory(_ category: UIContentSizeCategory)
+  public func stopMockingPreferredContentSizeCategory()
+}
+public struct DynamicTypeSnapshot {
+}
+public func dynamicTypeSnapshot(_ name: String? = nil, identifier: String? = nil, sizes: [UIContentSizeCategory] = allContentSizeCategories(), deviceAgnostic: Bool = false) -> DynamicTypeSnapshot
+public func recordDynamicTypeSnapshot(_ name: String? = nil, identifier: String? = nil, sizes: [UIContentSizeCategory] = allContentSizeCategories(), deviceAgnostic: Bool = false) -> DynamicTypeSnapshot
+public func == (lhs: Expectation<Snapshotable>, rhs: DynamicTypeSnapshot)
+public struct Snapshot {
+}
+public func snapshot(_ name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false) -> Snapshot
+public func recordSnapshot(_ name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false) -> Snapshot
+public func == (lhs: Expectation<Snapshotable>, rhs: Snapshot)
+public func 📷(_ file: FileString = #file, line: UInt = #line, snapshottable: Snapshotable)
+public func 📷(_ name: String, file: FileString = #file, line: UInt = #line, snapshottable: Snapshotable)

@@ -103,7 +103,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods (= 1.11.3)
-  pod-builder (= 4.4.5)
+  pod-builder
 
 BUNDLED WITH
    2.3.19

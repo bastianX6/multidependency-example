@@ -1,6 +1,6 @@
+source 'https://rubygems.org'
 # frozen_string_literal: true
 
-source "https://rubygems.org"
 
 gem "cocoapods", "1.11.3"
-gem "pod-builder", "4.4.5"
+gem 'pod-builder'

@@ -1,0 +1,124 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name Quick
+import Foundation
+@_exported import Quick
+import Swift
+import XCTest
+import _Concurrency
+@_hasMissingDesignatedInitializers open class Behavior<Context> {
+  open class var name: String {
+    get
+  }
+  open class func spec(_ aContext: @escaping () -> Context)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class _CallsiteBase : NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias FileString = String
+@objc @_hasMissingDesignatedInitializers final public class Callsite : _CallsiteBase {
+  @objc final public let file: FileString
+  @objc final public let line: UInt
+  @objc deinit
+}
+extension Callsite {
+  @nonobjc public static func == (lhs: Callsite, rhs: Callsite) -> Bool
+}
+public typealias BeforeExampleClosure = () -> Void
+public typealias BeforeExampleWithMetadataClosure = (_ exampleMetadata: ExampleMetadata) -> Void
+public typealias AfterExampleClosure = BeforeExampleClosure
+public typealias AfterExampleWithMetadataClosure = BeforeExampleWithMetadataClosure
+public typealias AroundExampleClosure = (_ runExample: @escaping () -> Void) -> Void
+public typealias AroundExampleWithMetadataClosure = (_ exampleMetadata: ExampleMetadata, _ runExample: @escaping () -> Void) -> Void
+public typealias BeforeSuiteClosure = () -> Void
+public typealias AfterSuiteClosure = BeforeSuiteClosure
+public func beforeSuite(_ closure: @escaping BeforeSuiteClosure)
+public func afterSuite(_ closure: @escaping AfterSuiteClosure)
+public func sharedExamples(_ name: String, closure: @escaping () -> Void)
+public func sharedExamples(_ name: String, closure: @escaping SharedExampleClosure)
+public func describe(_ description: String, closure: () -> Void)
+public func context(_ description: String, closure: () -> Void)
+public func beforeEach(_ closure: @escaping BeforeExampleClosure)
+public func beforeEach(_ closure: @escaping BeforeExampleWithMetadataClosure)
+public func afterEach(_ closure: @escaping AfterExampleClosure)
+public func afterEach(_ closure: @escaping AfterExampleWithMetadataClosure)
+public func aroundEach(_ closure: @escaping AroundExampleClosure)
+public func aroundEach(_ closure: @escaping AroundExampleWithMetadataClosure)
+public func it(_ description: String, file: FileString = #file, line: UInt = #line, closure: @escaping () throws -> Void)
+public func itBehavesLike(_ name: String, file: FileString = #file, line: UInt = #line)
+public func itBehavesLike(_ name: String, file: FileString = #file, line: UInt = #line, sharedExampleContext: @escaping SharedExampleContext)
+public func itBehavesLike<C>(_ behavior: Behavior<C>.Type, file: FileString = #file, line: UInt = #line, context: @escaping () -> C)
+public func pending(_ description: String, closure: () -> Void)
+public func xdescribe(_ description: String, closure: () -> Void)
+public func xcontext(_ description: String, closure: () -> Void)
+public func xit(_ description: String, file: FileString = #file, line: UInt = #line, closure: @escaping () throws -> Void)
+public func xitBehavesLike<C>(_ behavior: Behavior<C>.Type, file: FileString = #file, line: UInt = #line, context: @escaping () -> C)
+public func fdescribe(_ description: String, closure: () -> Void)
+public func fcontext(_ description: String, closure: () -> Void)
+public func fit(_ description: String, file: FileString = #file, line: UInt = #line, closure: @escaping () throws -> Void)
+public func fitBehavesLike(_ name: String, file: FileString = #file, line: UInt = #line)
+public func fitBehavesLike(_ name: String, file: FileString = #file, line: UInt = #line, sharedExampleContext: @escaping SharedExampleContext)
+public func fitBehavesLike<C>(_ behavior: Behavior<C>.Type, file: FileString = #file, line: UInt = #line, context: @escaping () -> C)
+@objc @_inheritsConvenienceInitializers @objcMembers public class _ExampleBase : NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers final public class Example : _ExampleBase {
+  @objc final public var isSharedExample: Swift.Bool
+  @objc final public var callsite: Callsite
+  @objc override final public var description: String {
+    @objc get
+  }
+  @objc final public var name: String {
+    @objc get
+  }
+  @objc final public func run()
+  @objc deinit
+}
+extension Example {
+  @nonobjc public static func == (lhs: Example, rhs: Example) -> Bool
+}
+@objc @_hasMissingDesignatedInitializers final public class ExampleGroup : NSObject {
+  @objc override final public var description: String {
+    @objc get
+  }
+  @objc final public var examples: [Example] {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class _ExampleMetadataBase : NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers final public class ExampleMetadata : _ExampleMetadataBase {
+  @objc final public let example: Example
+  @objc final public let exampleIndex: Int
+  @objc deinit
+}
+public typealias QuickConfigurer = (_ configuration: QCKConfiguration) -> Void
+public typealias ExampleFilter = (_ example: Example) -> Bool
+@objc @_inheritsConvenienceInitializers final public class QCKConfiguration : NSObject {
+  final public var runAllWhenEverythingFiltered: Swift.Bool
+  final public func include(_ filter: @escaping ExampleFilter)
+  final public func exclude(_ filter: @escaping ExampleFilter)
+  @objc(beforeEachWithMetadata:) final public func beforeEach(_ closure: @escaping BeforeExampleWithMetadataClosure)
+  final public func beforeEach(_ closure: @escaping BeforeExampleClosure)
+  @objc(afterEachWithMetadata:) final public func afterEach(_ closure: @escaping AfterExampleWithMetadataClosure)
+  final public func afterEach(_ closure: @escaping AfterExampleClosure)
+  final public func aroundEach(_ closure: @escaping AroundExampleClosure)
+  final public func aroundEach(_ closure: @escaping AroundExampleWithMetadataClosure)
+  final public func beforeSuite(_ closure: @escaping BeforeSuiteClosure)
+  final public func afterSuite(_ closure: @escaping AfterSuiteClosure)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class QuickTestSuite : XCTestSuite {
+  @objc public static func selectedTestSuite(forTestCaseWithName name: String, testName: String?) -> QuickTestSuite?
+  @objc override dynamic public init(name: Swift.String)
+  @objc deinit
+}
+public typealias SharedExampleContext = () -> [String : Any]
+public typealias SharedExampleClosure = (@escaping SharedExampleContext) -> Void

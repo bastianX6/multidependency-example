@@ -1,0 +1,12 @@
+{
+  "entry": "pod 'iOSSnapshotTestCase', '=8.0.0'",
+  "is_prebuilt": false,
+  "specs": [
+    "iOSSnapshotTestCase",
+    "iOSSnapshotTestCase/SwiftSupport",
+    "iOSSnapshotTestCase/Core"
+  ],
+  "is_static": false,
+  "original_compile_path": "/private/tmp/pod_builder",
+  "build_folder_hash": "5508408a8c4aed3b062c6b2fec5b351d7bbdabba"
+}

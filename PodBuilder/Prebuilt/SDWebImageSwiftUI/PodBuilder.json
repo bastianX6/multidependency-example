@@ -1,0 +1,10 @@
+{
+  "entry": "pod 'SDWebImageSwiftUI', '=2.0.2'",
+  "is_prebuilt": false,
+  "specs": [
+    "SDWebImageSwiftUI"
+  ],
+  "is_static": false,
+  "original_compile_path": "/private/tmp/pod_builder",
+  "build_folder_hash": "4a2aa9b667867c66d28ecc87492286305aabe83d"
+}

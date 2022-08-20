@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PodBuilder">
+   </FileRef>
+   <FileRef
       location = "group:ItunesExample.xcodeproj">
    </FileRef>
    <FileRef

@@ -8,38 +8,45 @@ PODS:
   - Nimble-Snapshots (9.4.0):
     - Nimble-Snapshots/Core (= 9.4.0)
   - Nimble-Snapshots/Core (9.4.0):
-    - iOSSnapshotTestCase (~> 8.0)
+    - iOSSnapshotTestCase
     - Nimble
   - Quick (5.0.1)
   - SDWebImage (5.13.2):
     - SDWebImage/Core (= 5.13.2)
   - SDWebImage/Core (5.13.2)
   - SDWebImageSwiftUI (2.0.2):
-    - SDWebImage (~> 5.10)
+    - SDWebImage
 
 DEPENDENCIES:
-  - Nimble
-  - Nimble-Snapshots
-  - Quick
-  - SDWebImageSwiftUI
+  - iOSSnapshotTestCase (from `PodBuilder/Prebuilt/iOSSnapshotTestCase`)
+  - Nimble (from `PodBuilder/Prebuilt/Nimble`)
+  - Nimble-Snapshots (from `PodBuilder/Prebuilt/Nimble-Snapshots`)
+  - Quick (from `PodBuilder/Prebuilt/Quick`)
+  - SDWebImage (from `PodBuilder/Prebuilt/SDWebImage`)
+  - SDWebImageSwiftUI (from `PodBuilder/Prebuilt/SDWebImageSwiftUI`)
 
-SPEC REPOS:
-  trunk:
-    - iOSSnapshotTestCase
-    - Nimble
-    - Nimble-Snapshots
-    - Quick
-    - SDWebImage
-    - SDWebImageSwiftUI
+EXTERNAL SOURCES:
+  iOSSnapshotTestCase:
+    :path: PodBuilder/Prebuilt/iOSSnapshotTestCase
+  Nimble:
+    :path: PodBuilder/Prebuilt/Nimble
+  Nimble-Snapshots:
+    :path: PodBuilder/Prebuilt/Nimble-Snapshots
+  Quick:
+    :path: PodBuilder/Prebuilt/Quick
+  SDWebImage:
+    :path: PodBuilder/Prebuilt/SDWebImage
+  SDWebImageSwiftUI:
+    :path: PodBuilder/Prebuilt/SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
-  iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
-  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
-  Nimble-Snapshots: ef281b908c604f78c8313587e25ea92c8ab513d7
-  Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
-  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
+  iOSSnapshotTestCase: 906174a1e9eb5bae36708eebb52fd64057de1944
+  Nimble: 40184954ea9a92b12c83acf0e51a67f9a1b3e0fd
+  Nimble-Snapshots: 4be2de9936b85f05442156d5dbb62cfb79f06fb3
+  Quick: cc972f441c01467939c75a0698f207e54246fc85
+  SDWebImage: d988dec7f66ed054444bcac4078600a175d0b575
+  SDWebImageSwiftUI: 9ad2e27b88bf5fee43971dc09f1ec3da9a66551e
 
-PODFILE CHECKSUM: 13ef688fe269052b7f40835182da9458b0a00ab2
+PODFILE CHECKSUM: c6ef7e7d0ea3dfda72b491df89f4c42e91ff477a
 
 COCOAPODS: 1.11.3

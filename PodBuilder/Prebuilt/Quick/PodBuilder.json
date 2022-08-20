@@ -1,0 +1,10 @@
+{
+  "entry": "pod 'Quick', '=5.0.1'",
+  "is_prebuilt": false,
+  "specs": [
+    "Quick"
+  ],
+  "is_static": false,
+  "original_compile_path": "/private/tmp/pod_builder",
+  "build_folder_hash": "a83b9d99812b08a853604c3f67f0512df89221c5"
+}

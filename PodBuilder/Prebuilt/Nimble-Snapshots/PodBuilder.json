@@ -1,0 +1,11 @@
+{
+  "entry": "pod 'Nimble-Snapshots', '=9.4.0'",
+  "is_prebuilt": false,
+  "specs": [
+    "Nimble-Snapshots",
+    "Nimble-Snapshots/Core"
+  ],
+  "is_static": false,
+  "original_compile_path": "/private/tmp/pod_builder",
+  "build_folder_hash": "99c0d9974eb898071886448b5a2fd6e9305a39f4"
+}
