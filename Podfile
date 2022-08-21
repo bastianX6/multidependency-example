@@ -30,16 +30,6 @@ target 'ItunesExample' do
 
 end
 
-target 'Networking' do
-  project 'Networking/Networking.xcodeproj'
-
-  target 'NetworkingTests' do
-    inherit! :search_paths
-    test_pods
-  end
-
-end
-
 target 'Search' do
   project 'Search/Search.xcodeproj'
 

@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -36,16 +37,6 @@
                BuildableName = "ItunesExampleTests.xctest"
                BlueprintName = "ItunesExampleTests"
                ReferencedContainer = "container:ItunesExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "038808A028A0894E00A9304F"
-               BuildableName = "NetworkingTests.xctest"
-               BlueprintName = "NetworkingTests"
-               ReferencedContainer = "container:Networking/Networking.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -66,6 +57,26 @@
                BuildableName = "SearchTests.xctest"
                BlueprintName = "SearchTests"
                ReferencedContainer = "container:Search/Search.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "NetworkingTests"
+               BuildableName = "NetworkingTests"
+               BlueprintName = "NetworkingTests"
+               ReferencedContainer = "container:Networking">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "VideoDetailTests"
+               BuildableName = "VideoDetailTests"
+               BlueprintName = "VideoDetailTests"
+               ReferencedContainer = "container:VideoDetail">
             </BuildableReference>
          </TestableReference>
       </Testables>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		501EE57F471EAE10E17AC25F /* Pods_AudioDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6B1A377EB394D87BE4A1EE /* Pods_AudioDetail.framework */; };
 		89C4053828E70D932719E75D /* Pods_AudioDetailTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E660946B06CD7963B996753 /* Pods_AudioDetailTests.framework */; };
+		8A4B02A828B2CE84005A90B3 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 8A4B02A728B2CE84005A90B3 /* Networking */; };
 		8AFA614928AE5F8A0076839D /* AudioDetail.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA614828AE5F8A0076839D /* AudioDetail.docc */; };
 		8AFA614F28AE5F8B0076839D /* AudioDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA614428AE5F8A0076839D /* AudioDetail.framework */; };
 		8AFA615428AE5F8B0076839D /* AudioDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA615328AE5F8B0076839D /* AudioDetailTests.swift */; };
@@ -16,7 +17,6 @@
 		8AFA616328AE60EA0076839D /* ItunesAudioLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA616228AE60EA0076839D /* ItunesAudioLookupService.swift */; };
 		8AFA616628AE616E0076839D /* ItunesAudioResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA616528AE616E0076839D /* ItunesAudioResponse.swift */; };
 		8AFA616828AE61880076839D /* ItunesAudioElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA616728AE61880076839D /* ItunesAudioElement.swift */; };
-		8AFA616A28AE623E0076839D /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA616928AE623E0076839D /* Networking.framework */; };
 		8AFA616E28AE635D0076839D /* ItunesAudioLookupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA616D28AE635D0076839D /* ItunesAudioLookupProvider.swift */; };
 		8AFA617128AE64C10076839D /* AudioDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA617028AE64C10076839D /* AudioDetailModel.swift */; };
 		8AFA617628AE663A0076839D /* AudioDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA617528AE663A0076839D /* AudioDetailViewModel.swift */; };
@@ -32,6 +32,19 @@
 			remoteInfo = AudioDetail;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A4B02AA28B2CE84005A90B3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7D6B1A377EB394D87BE4A1EE /* Pods_AudioDetail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioDetail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AFA616A28AE623E0076839D /* Networking.framework in Frameworks */,
+				8A4B02A828B2CE84005A90B3 /* Networking in Frameworks */,
 				501EE57F471EAE10E17AC25F /* Pods_AudioDetail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,12 +227,16 @@
 				8AFA614028AE5F8A0076839D /* Sources */,
 				8AFA614128AE5F8A0076839D /* Frameworks */,
 				8AFA614228AE5F8A0076839D /* Resources */,
+				8A4B02AA28B2CE84005A90B3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = AudioDetail;
+			packageProductDependencies = (
+				8A4B02A728B2CE84005A90B3 /* Networking */,
+			);
 			productName = AudioDetail;
 			productReference = 8AFA614428AE5F8A0076839D /* AudioDetail.framework */;
 			productType = "com.apple.product-type.framework";
@@ -642,6 +659,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A4B02A728B2CE84005A90B3 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8AFA613B28AE5F8A0076839D /* Project object */;
 }

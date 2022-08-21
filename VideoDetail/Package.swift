@@ -16,6 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Dependencies"),
+        .package(path: "../Networking"),
     ],
     targets: [
         .target(
@@ -23,6 +24,7 @@ let package = Package(
             dependencies: [
                 .product(name: "SDWebImageSwiftUI", package: "Dependencies"),
                 .product(name: "SDWebImage", package: "Dependencies"),
+                .product(name: "Networking", package: "Networking"),
             ]
         ),
         .testTarget(

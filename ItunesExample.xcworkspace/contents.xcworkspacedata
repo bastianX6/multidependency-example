@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ItunesExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Dependencies">
    </FileRef>
    <FileRef
-      location = "group:PodBuilder">
-   </FileRef>
-   <FileRef
-      location = "group:ItunesExample.xcodeproj">
+      location = "group:Networking">
    </FileRef>
    <FileRef
       location = "group:VideoDetail">
@@ -17,12 +17,12 @@
       location = "group:AudioDetail/AudioDetail.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Networking/Networking.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Search/Search.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PodBuilder">
    </FileRef>
 </Workspace>
