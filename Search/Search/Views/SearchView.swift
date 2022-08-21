@@ -8,6 +8,7 @@
 import AudioDetail
 import Foundation
 import SwiftUI
+import VideoDetail
 
 public struct SearchView: View {
     @ObservedObject private var viewModel = SearchViewModel()
@@ -56,6 +57,10 @@ public struct SearchView: View {
                             switch item.type {
                             case .music:
                                 NavigationLink(destination: AudioDetailView(trackId: item.trackId)) {
+                                    SearchViewCell(model: item)
+                                }
+                            case .musicVideo:
+                                NavigationLink(destination: VideoDetailView(trackId: item.trackId)) {
                                     SearchViewCell(model: item)
                                 }
                             default:

@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 struct ItunesAudioResponse: Codable {
     let resultCount: Int?
     let results: [ItunesAudioElement]?

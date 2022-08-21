@@ -23,6 +23,7 @@
 		8A2ACF2228A2CAD30066D2CE /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2ACF2128A2CAD30066D2CE /* SearchViewCell.swift */; };
 		8A2ACF2428A2CC370066D2CE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2ACF2328A2CC370066D2CE /* SearchView.swift */; };
 		8A4B02AC28B2CE94005A90B3 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 8A4B02AB28B2CE94005A90B3 /* Networking */; };
+		8A4B02B028B2D5E4005A90B3 /* VideoDetail in Frameworks */ = {isa = PBXBuildFile; productRef = 8A4B02AF28B2D5E4005A90B3 /* VideoDetail */; };
 		8AFA617A28AE69310076839D /* AudioDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA617928AE69310076839D /* AudioDetail.framework */; };
 		8AFA617E28AE6F0E0076839D /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA617D28AE6F0E0076839D /* SearchType.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A4B02AC28B2CE94005A90B3 /* Networking in Frameworks */,
+				8A4B02B028B2D5E4005A90B3 /* VideoDetail in Frameworks */,
 				8AFA617A28AE69310076839D /* AudioDetail.framework in Frameworks */,
 				3C850D68645A85F29D9BD629 /* Pods_Search.framework in Frameworks */,
 			);
@@ -249,6 +251,7 @@
 			name = Search;
 			packageProductDependencies = (
 				8A4B02AB28B2CE94005A90B3 /* Networking */,
+				8A4B02AF28B2D5E4005A90B3 /* VideoDetail */,
 			);
 			productName = Search;
 			productReference = 8A2ACEEB28A2AED30066D2CE /* Search.framework */;
@@ -676,6 +679,10 @@
 		8A4B02AB28B2CE94005A90B3 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		8A4B02AF28B2D5E4005A90B3 /* VideoDetail */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VideoDetail;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
