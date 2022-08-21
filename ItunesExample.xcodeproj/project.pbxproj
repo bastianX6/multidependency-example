@@ -20,6 +20,8 @@
 		8A2ACED328A288790066D2CE /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2ACED128A288790066D2CE /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A2ACF1628A2BDF10066D2CE /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2ACF1528A2BDF10066D2CE /* Search.framework */; };
 		8A2ACF1728A2BDF10066D2CE /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2ACF1528A2BDF10066D2CE /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A43FB7A28B2B06C0056E1F1 /* VideoDetail in Frameworks */ = {isa = PBXBuildFile; productRef = 8A43FB7928B2B06C0056E1F1 /* VideoDetail */; };
+		8A43FB7B28B2B06D0056E1F1 /* VideoDetail in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8A43FB7928B2B06C0056E1F1 /* VideoDetail */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8AFA617328AE65C00076839D /* AudioDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA617228AE65C00076839D /* AudioDetail.framework */; };
 		8AFA617428AE65C00076839D /* AudioDetail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA617228AE65C00076839D /* AudioDetail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D5775DCD69CDC5C450A5F3E /* Pods_ItunesExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114438E5338EA54F8D873154 /* Pods_ItunesExample.framework */; };
@@ -50,6 +52,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8A2ACF1728A2BDF10066D2CE /* Search.framework in Embed Frameworks */,
+				8A43FB7B28B2B06D0056E1F1 /* VideoDetail in Embed Frameworks */,
 				8AFA617428AE65C00076839D /* AudioDetail.framework in Embed Frameworks */,
 				8A2ACED328A288790066D2CE /* Networking.framework in Embed Frameworks */,
 			);
@@ -90,6 +93,7 @@
 			files = (
 				8A2ACED228A288790066D2CE /* Networking.framework in Frameworks */,
 				8A2ACF1628A2BDF10066D2CE /* Search.framework in Frameworks */,
+				8A43FB7A28B2B06C0056E1F1 /* VideoDetail in Frameworks */,
 				8AFA617328AE65C00076839D /* AudioDetail.framework in Frameworks */,
 				8D5775DCD69CDC5C450A5F3E /* Pods_ItunesExample.framework in Frameworks */,
 			);
@@ -209,7 +213,6 @@
 				034EC8D828A062BD00D06C34 /* Sources */,
 				034EC8D928A062BD00D06C34 /* Frameworks */,
 				034EC8DA28A062BD00D06C34 /* Resources */,
-				4BF42092699973184F65B4CF /* [CP] Embed Pods Frameworks */,
 				8A2ACED428A288790066D2CE /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -218,6 +221,7 @@
 			);
 			name = ItunesExample;
 			packageProductDependencies = (
+				8A43FB7928B2B06C0056E1F1 /* VideoDetail */,
 			);
 			productName = ItunesExample;
 			productReference = 034EC8DC28A062BD00D06C34 /* ItunesExample.app */;
@@ -231,7 +235,6 @@
 				034EC8E828A062C300D06C34 /* Sources */,
 				034EC8E928A062C300D06C34 /* Frameworks */,
 				034EC8EA28A062C300D06C34 /* Resources */,
-				D3B39419F18990DB7056CBEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,7 +254,6 @@
 				034EC8F228A062C300D06C34 /* Sources */,
 				034EC8F328A062C300D06C34 /* Frameworks */,
 				034EC8F428A062C300D06C34 /* Resources */,
-				9D9B290A7FC9F1D834689E61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,23 +335,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BF42092699973184F65B4CF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ItunesExample/Pods-ItunesExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ItunesExample/Pods-ItunesExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ItunesExample/Pods-ItunesExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		510B1E432F5B14CF596705F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,23 +357,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D9B290A7FC9F1D834689E61 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ItunesExample-ItunesExampleUITests/Pods-ItunesExample-ItunesExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ItunesExample-ItunesExampleUITests/Pods-ItunesExample-ItunesExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ItunesExample-ItunesExampleUITests/Pods-ItunesExample-ItunesExampleUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A3BDE4FB7F6F552D6650C63B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,23 +377,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3B39419F18990DB7056CBEA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ItunesExampleTests/Pods-ItunesExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ItunesExampleTests/Pods-ItunesExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ItunesExampleTests/Pods-ItunesExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E8B1671A6EDFADF6108B48A0 /* [CP] Check Pods Manifest.lock */ = {
@@ -529,6 +480,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -589,6 +541,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -787,6 +740,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A43FB7928B2B06C0056E1F1 /* VideoDetail */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VideoDetail;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 034EC8D428A062BD00D06C34 /* Project object */;
 }

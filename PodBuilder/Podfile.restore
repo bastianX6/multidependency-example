@@ -9,9 +9,6 @@ platform :ios, '15.0'
 
 target 'ItunesExample' do
 	project '../ItunesExample.xcodeproj'
-	pod 'SDWebImage', '=5.13.2' # pb<SDWebImage> is<false>
-	pod 'SDWebImage/Core', '=5.13.2' # pb<SDWebImage/Core> is<false>
-	pod 'SDWebImageSwiftUI', '=2.0.2' # pb<SDWebImageSwiftUI> is<false>
 end
 
 target 'Networking' do
@@ -34,20 +31,10 @@ end
 
 target 'ItunesExampleTests' do
 	project '../ItunesExample.xcodeproj'
-	pod 'Nimble', '=10.0.0' # pb<Nimble> is<false>
-	pod 'Nimble-Snapshots', '=9.4.0' # pb<Nimble-Snapshots> is<false>
-	pod 'Nimble-Snapshots/Core', '=9.4.0' # pb<Nimble-Snapshots/Core> is<false>
-	pod 'Quick', '=5.0.1' # pb<Quick> is<false>
-	pod 'iOSSnapshotTestCase', '=8.0.0' # pb<iOSSnapshotTestCase> is<false>
-	pod 'iOSSnapshotTestCase/Core', '=8.0.0' # pb<iOSSnapshotTestCase/Core> is<false>
-	pod 'iOSSnapshotTestCase/SwiftSupport', '=8.0.0' # pb<iOSSnapshotTestCase/SwiftSupport> is<false>
 end
 
 target 'ItunesExampleUITests' do
 	project '../ItunesExample.xcodeproj'
-	pod 'SDWebImage', '=5.13.2' # pb<SDWebImage> is<false>
-	pod 'SDWebImage/Core', '=5.13.2' # pb<SDWebImage/Core> is<false>
-	pod 'SDWebImageSwiftUI', '=2.0.2' # pb<SDWebImageSwiftUI> is<false>
 end
 
 target 'NetworkingTests' do

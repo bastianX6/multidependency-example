@@ -20,12 +20,8 @@ end
 target 'ItunesExample' do
   project 'ItunesExample.xcodeproj'
 
-  pod 'SDWebImage', :path => 'PodBuilder/Prebuilt/SDWebImage' # pb<SDWebImageSwiftUI>
-  pod 'SDWebImageSwiftUI', :path => 'PodBuilder/Prebuilt/SDWebImageSwiftUI' # pb<SDWebImageSwiftUI>
-
   target 'ItunesExampleTests' do
     inherit! :search_paths
-    snapshot_test_pods
   end
 
   target 'ItunesExampleUITests' do

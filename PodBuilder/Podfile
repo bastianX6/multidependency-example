@@ -15,11 +15,8 @@ end
 target 'ItunesExample' do
   project '../ItunesExample.xcodeproj'
 
-  pod 'SDWebImageSwiftUI'
-
   target 'ItunesExampleTests' do
     inherit! :search_paths
-    snapshot_test_pods
   end
 
   target 'ItunesExampleUITests' do
