@@ -15,25 +15,23 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", from: "2.0.0"),
-        .package(url: "https://github.com/Quick/Quick.git", from: "5.0.0"),
-        .package(url: "https://github.com/Quick/Nimble.git", from: "10.0.0"),
-        .package(url: "https://github.com/ashfurrow/Nimble-Snapshots.git", from: "9.0.0"),
+        .package(path: "../Dependencies"),
     ],
     targets: [
         .target(
             name: "VideoDetail",
             dependencies: [
-                "SDWebImageSwiftUI",
+                .product(name: "SDWebImageSwiftUI", package: "Dependencies"),
+                .product(name: "SDWebImage", package: "Dependencies"),
             ]
         ),
         .testTarget(
             name: "VideoDetailTests",
             dependencies: [
                 "VideoDetail",
-                "Quick",
-                "Nimble",
-                "Nimble-Snapshots",
+                .product(name: "Quick", package: "Dependencies"),
+                .product(name: "Nimble", package: "Dependencies"),
+                .product(name: "Nimble-Snapshots", package: "Dependencies"),
             ]
         ),
     ]
