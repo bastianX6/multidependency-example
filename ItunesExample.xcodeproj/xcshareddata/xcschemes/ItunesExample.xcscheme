@@ -42,16 +42,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "034EC8F528A062C300D06C34"
-               BuildableName = "ItunesExampleUITests.xctest"
-               BlueprintName = "ItunesExampleUITests"
-               ReferencedContainer = "container:ItunesExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "038808A028A0894E00A9304F"
                BuildableName = "NetworkingTests.xctest"
                BlueprintName = "NetworkingTests"
@@ -76,16 +66,6 @@
                BuildableName = "SearchTests.xctest"
                BlueprintName = "SearchTests"
                ReferencedContainer = "container:Search/Search.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "VideoDetailTests"
-               BuildableName = "VideoDetailTests"
-               BlueprintName = "VideoDetailTests"
-               ReferencedContainer = "container:VideoDetail">
             </BuildableReference>
          </TestableReference>
       </Testables>

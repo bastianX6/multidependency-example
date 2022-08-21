@@ -26,7 +26,7 @@ public class NetworkClient: NetworkClientProtocol {
         request.httpBody = httpBody
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
+        let (data, response) = try await self.urlSession.data(for: request, delegate: nil)
 
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkClientError.noHttpResponse

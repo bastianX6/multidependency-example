@@ -20,8 +20,6 @@
 		8A2ACED328A288790066D2CE /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2ACED128A288790066D2CE /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A2ACF1628A2BDF10066D2CE /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2ACF1528A2BDF10066D2CE /* Search.framework */; };
 		8A2ACF1728A2BDF10066D2CE /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2ACF1528A2BDF10066D2CE /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8ACEF9CF28B1740400C635F9 /* VideoDetail in Frameworks */ = {isa = PBXBuildFile; productRef = 8ACEF9CE28B1740400C635F9 /* VideoDetail */; };
-		8ACEF9D028B1740400C635F9 /* VideoDetail in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8ACEF9CE28B1740400C635F9 /* VideoDetail */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8AFA617328AE65C00076839D /* AudioDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA617228AE65C00076839D /* AudioDetail.framework */; };
 		8AFA617428AE65C00076839D /* AudioDetail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFA617228AE65C00076839D /* AudioDetail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D5775DCD69CDC5C450A5F3E /* Pods_ItunesExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114438E5338EA54F8D873154 /* Pods_ItunesExample.framework */; };
@@ -52,7 +50,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8A2ACF1728A2BDF10066D2CE /* Search.framework in Embed Frameworks */,
-				8ACEF9D028B1740400C635F9 /* VideoDetail in Embed Frameworks */,
 				8AFA617428AE65C00076839D /* AudioDetail.framework in Embed Frameworks */,
 				8A2ACED328A288790066D2CE /* Networking.framework in Embed Frameworks */,
 			);
@@ -93,7 +90,6 @@
 			files = (
 				8A2ACED228A288790066D2CE /* Networking.framework in Frameworks */,
 				8A2ACF1628A2BDF10066D2CE /* Search.framework in Frameworks */,
-				8ACEF9CF28B1740400C635F9 /* VideoDetail in Frameworks */,
 				8AFA617328AE65C00076839D /* AudioDetail.framework in Frameworks */,
 				8D5775DCD69CDC5C450A5F3E /* Pods_ItunesExample.framework in Frameworks */,
 			);
@@ -222,7 +218,6 @@
 			);
 			name = ItunesExample;
 			packageProductDependencies = (
-				8ACEF9CE28B1740400C635F9 /* VideoDetail */,
 			);
 			productName = ItunesExample;
 			productReference = 034EC8DC28A062BD00D06C34 /* ItunesExample.app */;
@@ -792,13 +787,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8ACEF9CE28B1740400C635F9 /* VideoDetail */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = VideoDetail;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 034EC8D428A062BD00D06C34 /* Project object */;
 }
